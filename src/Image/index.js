@@ -38,7 +38,7 @@ const Image = ({
         onError={handleError}
       />
       {loading && Spinner && <Spinner className={`${BASE_CLASS}-spinner`} />}
-      {error && <Error />}
+      {error && <Error msg="Image couldn't be loaded" />}
     </figure>
   );
 };

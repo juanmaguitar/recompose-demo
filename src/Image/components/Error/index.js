@@ -1,9 +1,15 @@
 import React from "react";
-import './styles.css'
+import "./styles.css";
 
-const ErrorLoadingBox = () =>
-  <div className='ErrorLoadingBox'>
-    <p><span role="img" aria-label="skull">💀</span> No se pudo cargar la imagen</p>
+const ErrorLoadingBox = ({ msg }) => (
+  <div className="ErrorLoadingBox">
+    <p>
+      <span role="img" aria-label="skull">
+        💀
+      </span>{" "}
+      {msg}
+    </p>
   </div>
+);
 
-export default ErrorLoadingBox
+export default ErrorLoadingBox;
