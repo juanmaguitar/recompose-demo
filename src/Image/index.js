@@ -28,7 +28,6 @@ const Image = ({
     error && `is-error`
   );
 
-  // console.log({ src, loading, handleLoad, placeholderStyle });
   return (
     <figure style={placeholderStyle} className={classNames}>
       <img
@@ -43,7 +42,5 @@ const Image = ({
     </figure>
   );
 };
-
-// const debug = withProps(console.log)
 
 export default compose(withLoadingState, withErrorState)(Image);
