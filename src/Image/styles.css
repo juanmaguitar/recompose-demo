@@ -20,25 +20,27 @@
   position: relative;
 }
 
-.is-loading .react-Image-image {
+.react-Image.is-loading .react-Image-image {
   opacity: 0;
 }
 
-.is-loaded .react-Image-image {
+.react-Image.is-loaded .react-Image-image {
   opacity: 1;
 }
 
-.is-error .react-Image-image {
+.react-Image.is-error .react-Image-image {
   display: none;
 }
 
 .react-Image-spinner {
   position: absolute;
   z-index: 999;
-  top: 50%; 
-  left: 50%; 
+  top: 50%;
+  left: 50%;
   width: 30%;
 }
+
+/* ------------------------------ */
 
 .react-spinner_bar {
   background-color: black;

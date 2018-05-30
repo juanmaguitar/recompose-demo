@@ -4,7 +4,7 @@ export default compose(
   withState("loading", "setLoadingState", true),
   withHandlers({
     handleLoad: props => e => {
-      props.setLoadingState(false);
+      setTimeout(() => props.setLoadingState(false), 3000);
     }
   })
 );
