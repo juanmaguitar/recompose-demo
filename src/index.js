@@ -1,5 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
+import Spinner from "react-spinner";
+
 import Image from "./Image";
 
 const imageSrc = "https://picsum.photos/4000?image=980";
@@ -11,7 +13,7 @@ const styles = {
 
 const App = () => (
   <div style={styles}>
-    <Image name="CodeSandbox" src={imageSrc} />
+    <Image name="CodeSandbox" spinner={Spinner} src={imageSrc} />
     <h2>Start editing to see some magic happen {"\u2728"}</h2>
   </div>
 );
