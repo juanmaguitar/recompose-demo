@@ -21,6 +21,10 @@
   opacity: 1;
 }
 
+.is-error .react-Image-image {
+  display: none;
+}
+
 .react-Image-spinner {
   position: absolute;
   z-index: 999;

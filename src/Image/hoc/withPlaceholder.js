@@ -1,4 +1,4 @@
-import { compose, withProps, mapProps, withPropsOnChange } from "recompose";
+import { compose, withProps } from "recompose";
 
 export default compose(
   withProps(({ placeholder }) => {
@@ -8,12 +8,5 @@ export default compose(
     return {
       placeholderStyle
     };
-  }),
-  withPropsOnChange(["loading"], props => {
-    const { loading } = props;
-    if (!loading) {
-      console.log("image loaded!");
-      console.log(props);
-    }
   })
 );
