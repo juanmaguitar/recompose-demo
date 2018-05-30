@@ -4,7 +4,7 @@ import Spinner from "react-spinner";
 
 import Image from "./Image";
 
-const imageSrc = "https://picsum.photos/4000?image=980";
+const imageSrc = "https://picsum.photos/5000?image=980";
 
 const styles = {
   fontFamily: "sans-serif",
