@@ -12,6 +12,13 @@
   margin: 0;
 }
 
+.react-Image--placeholder {
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
 
 .is-loading .react-Image-image {
   opacity: 0;

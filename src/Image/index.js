@@ -23,6 +23,7 @@ const Image = ({
 
   const classNames = cx(
     BASE_CLASS,
+    placeholder && `${BASE_CLASS}--placeholder`,
     `is-${loading ? "loading" : "loaded"}`,
     error && `is-error`
   );
