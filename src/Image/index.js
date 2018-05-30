@@ -15,13 +15,16 @@ const Image = ({
 }) => {
   const loaded = loading !== false;
 
-  const _classNames = cx(BASE_CLASS, ("is-loaded": loaded));
+  const _classNames = cx(
+    BASE_CLASS, 
+    `is-${loading ? 'loading' : 'loaded'}`
+  );
 
   console.log({ src, loading, handleLoad, placeholderStyle });
   return (
     <figure style={placeholderStyle} className={_classNames}>
-      <img alt="" src={src} className={BASE_CLASS} onLoad={handleLoad} />
-      {Spinner && loading && <Spinner />}
+      <img alt="" src={src} className={`${BASE_CLASS}-image`} onLoad={handleLoad} />
+      {loading && Spinner && <Spinner className={`${BASE_CLASS}-spinner`} />}
     </figure>
   );
 };

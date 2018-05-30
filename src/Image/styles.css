@@ -1,14 +1,34 @@
 .react-Image {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+}
+
+.react-Image-image {
   object-fit: cover;
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-.react-Image img {
+
+.is-loading .react-Image-image {
   opacity: 0;
 }
 
-.react-Image.is-loaded img {
+.is-loaded .react-Image-image {
   opacity: 1;
+}
+
+.react-Image-spinner {
+  position: absolute;
+  z-index: 999;
+  top: 50%; 
+  left: 50%; 
+  width: 30%;
+}
+
+.react-spinner_bar {
+  background-color: black;
 }
