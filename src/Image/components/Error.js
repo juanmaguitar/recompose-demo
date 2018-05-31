@@ -1,8 +1,7 @@
 import React from "react";
-import "./styles.css";
 
-const ErrorLoadingBox = ({ msg }) => (
-  <div className="ErrorLoadingBox">
+const ErrorLoadingBox = ({ className, msg }) => (
+  <div className={ className }>
     <p>
       <span role="img" aria-label="skull">
         💀

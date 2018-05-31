@@ -17,6 +17,7 @@ const Image = ({
   loading,
   error
 }) => {
+  
   const placeholderStyle = {
     backgroundImage: `url(${placeholder})`
   };
@@ -29,17 +30,19 @@ const Image = ({
   );
 
   return (
-    <figure style={placeholderStyle} className={classNames}>
-      <img
-        alt=""
-        src={src}
-        className={`${BASE_CLASS}-image`}
-        onLoad={handleLoad}
-        onError={handleError}
-      />
+    <div className={classNames}>
+      <figure style={placeholderStyle} className={`${BASE_CLASS}-figure`}>
+        <img
+          alt=""
+          src={src}
+          className={`${BASE_CLASS}-image`}
+          onLoad={handleLoad}
+          onError={handleError}
+        />
+      </figure>
       {loading && Spinner && <Spinner className={`${BASE_CLASS}-spinner`} />}
-      {error && <Error msg="Image couldn't be loaded" />}
-    </figure>
+      {error && <Error className={`${BASE_CLASS}-error`} msg="Image couldn't be loaded" />}
+    </div>
   );
 };
 
